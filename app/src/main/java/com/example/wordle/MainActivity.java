@@ -1,9 +1,12 @@
 package com.example.wordle;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
@@ -17,6 +20,8 @@ import com.example.wordle.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Main Class for main function
@@ -24,13 +29,17 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    private String words[];
+    private char[] buffer;
+    private static int posX = 0;
+    private static int posY = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.wordle.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -46,6 +55,20 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        initialize();
+    }
+
+    private void initialize() {
+        words = new String[6];
+        for (int i = 0; i < 6; i++) {
+            words[i] = "";
+        }
+
+        buffer = new char[5];
+        for (int i = 0; i < 5; i++) {
+            buffer[i] = '0';
+        }
     }
 
     @Override
@@ -75,5 +98,70 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    private void test1234(View v) {
+        if (posY >= 6 || buffer[4] == '0') {
+            return;
+        }
+
+        String tmpWord = "";
+
+        for (char c : buffer) {
+            tmpWord += Character.toString(c);
+        }
+
+        words[posY] = tmpWord;
+
+        Context c = v.getContext();
+
+        Toast.makeText(c,tmpWord, Toast.LENGTH_SHORT).show();
+    }
+
+    public void charBTN(View v) {
+        Context c1 = v.getContext();
+        Button b = (Button)v;
+        String buttonText = b.getText().toString();
+        char c = buttonText.charAt(0);
+        Toast.makeText(c1, buttonText, Toast.LENGTH_SHORT).show();
+
+        insertChar(c);
+    }
+
+    private void insertChar(char c) {
+        if (posY >= 6) {
+            return;
+        }
+
+        buffer[posX] = c;
+        posX++;
+
+        if (posX >= 5) {
+            posX = 0;
+            posY++;
+        }
+    }
+
+    public void test123(View view) {
+        if (posY >= 6 || buffer[4] == '0') {
+            return;
+        }
+
+        String tmpWord = "";
+
+        for (char c : buffer) {
+            tmpWord += Character.toString(c);
+        }
+
+        words[posY] = tmpWord;
+
+        Context c = view.getContext();
+
+        Toast.makeText(c,tmpWord, Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void test55(View v) {
+        System.out.println("test55");
     }
 }
