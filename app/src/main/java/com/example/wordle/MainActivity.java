@@ -48,14 +48,6 @@ public class MainActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         initialize();
     }
 
@@ -100,49 +92,26 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    private void test1234(View v) {
-        if (posY >= 6 || buffer[4] == '0') {
-            return;
-        }
-
-        String tmpWord = "";
-
-        for (char c : buffer) {
-            tmpWord += Character.toString(c);
-        }
-
-        words[posY] = tmpWord;
-
-        Context c = v.getContext();
-
-        Toast.makeText(c,tmpWord, Toast.LENGTH_SHORT).show();
-    }
-
     public void charBTN(View v) {
         Context c1 = v.getContext();
         Button b = (Button)v;
         String buttonText = b.getText().toString();
         char c = buttonText.charAt(0);
-        Toast.makeText(c1, buttonText, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(c1, buttonText, Toast.LENGTH_SHORT).show();
 
         insertChar(c);
     }
 
     private void insertChar(char c) {
-        if (posY >= 6) {
+        if (posY >= 6 || posX >= 5) {
             return;
         }
 
         buffer[posX] = c;
         posX++;
-
-        if (posX >= 5) {
-            posX = 0;
-            posY++;
-        }
     }
 
-    public void test123(View view) {
+    public void submitWord(View view) {
         if (posY >= 6 || buffer[4] == '0') {
             return;
         }
@@ -154,14 +123,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         words[posY] = tmpWord;
+        for (int i = 0; i < 5; i++) {
+            buffer[i] = '0';
+        }
+        posY++;
+        posX = 0;
 
         Context c = view.getContext();
 
         Toast.makeText(c,tmpWord, Toast.LENGTH_SHORT).show();
     }
 
-
-    public void test55(View v) {
-        System.out.println("test55");
+    public void printWords(View view) {
+        for (String word : words) {
+            System.out.println(word);
+        }
     }
 }
