@@ -696,7 +696,7 @@
 
             <TextView
                 android:id="@+id/tv00"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -705,38 +705,38 @@
 
             <TextView
                 android:id="@+id/tv01"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv02"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv03"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv04"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -747,47 +747,47 @@
 
             <TextView
                 android:id="@+id/tv10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv11"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv12"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv13"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/tv14"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:background="@drawable/textview_border"
+                android:gravity="center"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -798,7 +798,7 @@
 
             <TextView
                 android:id="@+id/tv20"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -807,7 +807,7 @@
 
             <TextView
                 android:id="@+id/tv21"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -816,7 +816,7 @@
 
             <TextView
                 android:id="@+id/tv22"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -825,7 +825,7 @@
 
             <TextView
                 android:id="@+id/tv23"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -834,7 +834,7 @@
 
             <TextView
                 android:id="@+id/tv24"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -849,7 +849,7 @@
 
             <TextView
                 android:id="@+id/tv30"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -858,7 +858,7 @@
 
             <TextView
                 android:id="@+id/tv31"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -867,7 +867,7 @@
 
             <TextView
                 android:id="@+id/tv32"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -876,7 +876,7 @@
 
             <TextView
                 android:id="@+id/tv33"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -885,7 +885,7 @@
 
             <TextView
                 android:id="@+id/tv34"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -900,7 +900,7 @@
 
             <TextView
                 android:id="@+id/tv40"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -909,7 +909,7 @@
 
             <TextView
                 android:id="@+id/tv41"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -918,7 +918,7 @@
 
             <TextView
                 android:id="@+id/tv42"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -927,7 +927,7 @@
 
             <TextView
                 android:id="@+id/tv43"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
@@ -936,7 +936,7 @@
 
             <TextView
                 android:id="@+id/tv44"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"

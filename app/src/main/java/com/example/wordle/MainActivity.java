@@ -21,7 +21,10 @@ import com.example.wordle.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.lang.reflect.Field;
 
 /**
  * Main Class for main function
@@ -107,9 +110,17 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        setContentView(R.layout.fragment_second);
+
+        // TODO make method
+        int resID = getResources().getIdentifier("tv00", "id", getPackageName());
+        TextView tv1 = (TextView)findViewById(resID);
+        tv1.setText("Hello");
+
         buffer[posX] = c;
         posX++;
     }
+
 
     public void submitWord(View view) {
         if (posY >= 6 || buffer[4] == '0') {
