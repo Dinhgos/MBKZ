@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="393dp"
-    android:layout_height="match_parent"
+    android:layout_height="730dp"
     tools:context=".SecondFragment">
 
     <Button
@@ -97,7 +97,7 @@
         android:includeFontPadding="false"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="printWords"
+        android:onClick="removeLetter"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
         android:paddingRight="0dp"

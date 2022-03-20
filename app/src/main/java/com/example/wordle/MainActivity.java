@@ -111,11 +111,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void charBTN(View v) {
-        Context c1 = v.getContext();
         Button b = (Button)v;
         String buttonText = b.getText().toString();
         char c = buttonText.charAt(0);
-        //Toast.makeText(c1, buttonText, Toast.LENGTH_SHORT).show();
 
         insertChar(c);
     }
@@ -149,14 +147,13 @@ public class MainActivity extends AppCompatActivity {
         posY++;
         posX = 0;
 
-        Context c = view.getContext();
-
-        Toast.makeText(c,tmpWord, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),tmpWord,Toast.LENGTH_SHORT).show();
     }
 
-    public void printWords(View view) {
-        for (String word : words) {
-            System.out.println(word);
+    public void removeLetter(View view) {
+        if (posX > 0) {
+            posX--;
+            tvs[posY][posX].setText(" ");
         }
     }
 }
