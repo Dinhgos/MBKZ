@@ -24,7 +24,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Main Class for main function
@@ -32,12 +36,14 @@ import java.lang.reflect.Field;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private String words[];
+    private String[] words;
     private char[] buffer;
     private static int posX = 0;
     private static int posY = 0;
     private static TextView[][] tvs;
-
+    private static final String[] ALLOWED = new String[10657];
+    private static final String[] ANSWERS = new String[2315];
+    private static String SOLUTION;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +84,45 @@ public class MainActivity extends AppCompatActivity {
                 TextView tv = (TextView)findViewById(resID);
                 tvs[i][j] = tv;
             }
+        }
+
+        loadData();
+        pickWord();
+    }
+
+    private void pickWord() {
+        int rNum = (int) (Math.random() * 2314);
+        SOLUTION = ANSWERS[rNum];
+    }
+
+    private void loadData() {
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new InputStreamReader(getAssets().open("wordle-allowed-guesses.txt"), StandardCharsets.UTF_8));
+
+            String mLine;
+            int counter = 0;
+            while ((mLine = reader.readLine()) != null) {
+                ALLOWED[counter] = mLine;
+                counter++;
+            }
+        } catch (IOException e) {
+            System.out.println("Could not read data from wordle-allowed-guesses.txt.");
+            System.exit(1);
+        }
+
+        try {
+            reader = new BufferedReader(new InputStreamReader(getAssets().open("wordle-answers-alphabetical.txt"), StandardCharsets.UTF_8));
+
+            String mLine;
+            int counter = 0;
+            while ((mLine = reader.readLine()) != null) {
+                ANSWERS[counter] = mLine;
+                counter++;
+            }
+        } catch (IOException e) {
+            System.out.println("Could not read data from wordle-answers-alphabetical.txt.");
+            System.exit(1);
         }
     }
 
