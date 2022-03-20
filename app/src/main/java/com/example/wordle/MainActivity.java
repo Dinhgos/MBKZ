@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private char[] buffer;
     private static int posX = 0;
     private static int posY = 0;
+    private static TextView[][] tvs;
 
 
     @Override
@@ -63,6 +64,20 @@ public class MainActivity extends AppCompatActivity {
         buffer = new char[5];
         for (int i = 0; i < 5; i++) {
             buffer[i] = '0';
+        }
+
+        tvs = new TextView[6][5];
+        String resIdStr;
+        setContentView(R.layout.fragment_second);
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 5; j++) {
+                resIdStr = "tv" + i + j;
+                int resID = getResources().getIdentifier(resIdStr, "id", getPackageName());
+
+                TextView tv = (TextView)findViewById(resID);
+                tvs[i][j] = tv;
+            }
         }
     }
 
@@ -110,17 +125,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        setContentView(R.layout.fragment_second);
-
-        // TODO make method
-        int resID = getResources().getIdentifier("tv00", "id", getPackageName());
-        TextView tv1 = (TextView)findViewById(resID);
-        tv1.setText("Hello");
+        tvs[posY][posX].setText(Character.toString(c));
 
         buffer[posX] = c;
         posX++;
     }
-
 
     public void submitWord(View view) {
         if (posY >= 6 || buffer[4] == '0') {

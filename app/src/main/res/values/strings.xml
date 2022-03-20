@@ -44,6 +44,7 @@
     <string name="m">M</string>
     <string name="enter">Enter</string>
     <string name="backspace">back</string>
+    <string name="empty" />
 
 
 </resources>

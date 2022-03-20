@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="393dp"
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
@@ -21,7 +21,7 @@
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="560dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -41,83 +41,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/pBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/p"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/oBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/eBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/e"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/wBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/uBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/u"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/yBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
         android:id="@+id/tBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="560dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -137,11 +65,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/wBTN"
+        android:id="@+id/eBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="560dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -152,140 +80,60 @@
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/w"
+        android:text="@string/e"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/qBTN"
+        app:layout_constraintStart_toEndOf="@+id/wBTN"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/iBTN"
-        android:layout_width="30dp"
+        android:id="@+id/backBTN"
+        android:layout_width="50dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:includeFontPadding="false"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
+        android:onClick="printWords"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
-        android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/i"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
+        android:text="@string/backspace"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/uBTN"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mBTN"
+        app:layout_constraintTop_toBottomOf="@+id/aBTN"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/rBTN"
-        android:layout_width="30dp"
+        android:id="@+id/enterBTN"
+        android:layout_width="50dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:includeFontPadding="false"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
+        android:onClick="submitWord"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
-        android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/r"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/eBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/yBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/y"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/tBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/oBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="488dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/o"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/iBTN"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/aBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/a"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
+        android:text="@string/enter"
         app:iconPadding="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        app:layout_constraintTop_toBottomOf="@+id/aBTN"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/sBTN"
+        android:id="@+id/pBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="560dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -296,92 +144,20 @@
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/s"
+        android:text="@string/p"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/aBTN"
-        app:layout_constraintTop_toBottomOf="@+id/qBTN"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/gBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/g"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/fBTN"
-        app:layout_constraintTop_toBottomOf="@+id/qBTN"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/fBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/f"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/dBTN"
-        app:layout_constraintTop_toBottomOf="@+id/qBTN"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/jBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/j"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/hBTN"
-        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        app:layout_constraintStart_toEndOf="@+id/oBTN"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/dBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -401,11 +177,59 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/kBTN"
+        android:id="@+id/iBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="560dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/i"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/uBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/bBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/b"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/vBTN"
+        app:layout_constraintTop_toBottomOf="@+id/aBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/kBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -425,11 +249,35 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
+        android:id="@+id/aBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/a"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
         android:id="@+id/lBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -449,11 +297,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/hBTN"
+        android:id="@+id/gBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -464,32 +312,12 @@
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/h"
+        android:text="@string/g"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/gBTN"
+        app:layout_constraintStart_toEndOf="@+id/fBTN"
         app:layout_constraintTop_toBottomOf="@+id/qBTN"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/enterBTN"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:includeFontPadding="false"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="submitWord"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/enter"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aBTN"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -497,7 +325,7 @@
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -521,7 +349,7 @@
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -541,11 +369,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/bBTN"
+        android:id="@+id/wBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="560dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -556,12 +384,12 @@
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/b"
+        android:text="@string/w"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/vBTN"
-        app:layout_constraintTop_toBottomOf="@+id/aBTN"
+        app:layout_constraintStart_toEndOf="@+id/qBTN"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
@@ -569,7 +397,7 @@
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -589,35 +417,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/mBTN"
-        android:layout_width="30dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:onClick="charBTN"
-        android:paddingStart="0dp"
-        android:paddingLeft="0dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="0dp"
-        android:paddingRight="0dp"
-        android:paddingBottom="0dp"
-        android:text="@string/m"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="14sp"
-        app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/nBTN"
-        app:layout_constraintTop_toBottomOf="@+id/aBTN"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
         android:id="@+id/nBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -637,11 +441,35 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
+        android:id="@+id/sBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/s"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/aBTN"
+        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
         android:id="@+id/vBTN"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -661,30 +489,200 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/backBTN"
-        android:layout_width="50dp"
+        android:id="@+id/mBTN"
+        android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:includeFontPadding="false"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:onClick="printWords"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
         android:paddingLeft="0dp"
         android:paddingTop="0dp"
+        android:paddingEnd="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
-        android:text="@string/backspace"
+        android:text="@string/m"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@+id/mBTN"
+        app:layout_constraintStart_toEndOf="@+id/nBTN"
         app:layout_constraintTop_toBottomOf="@+id/aBTN"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <Button
+        android:id="@+id/jBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/j"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/hBTN"
+        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/rBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="560dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/r"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/eBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/uBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="560dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/u"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/yBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/fBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/f"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/dBTN"
+        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/yBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="560dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/y"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/tBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/oBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="560dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/o"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/iBTN"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/hBTN"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="charBTN"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/h"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@+id/gBTN"
+        app:layout_constraintTop_toBottomOf="@+id/qBTN"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="422dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="393dp"
+        android:layout_height="480dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_second">
@@ -701,7 +699,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv01"
@@ -710,7 +708,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv02"
@@ -719,7 +717,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv03"
@@ -728,7 +726,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv04"
@@ -737,7 +735,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -752,7 +750,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv11"
@@ -761,7 +759,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv12"
@@ -770,7 +768,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv13"
@@ -779,7 +777,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv14"
@@ -788,7 +786,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -803,7 +801,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv21"
@@ -812,7 +810,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv22"
@@ -821,7 +819,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv23"
@@ -830,7 +828,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv24"
@@ -839,7 +837,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -854,7 +852,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv31"
@@ -863,7 +861,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv32"
@@ -872,7 +870,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv33"
@@ -881,7 +879,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv34"
@@ -890,7 +888,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
         </LinearLayout>
 
         <LinearLayout
@@ -905,7 +903,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv41"
@@ -914,7 +912,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv42"
@@ -923,7 +921,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv43"
@@ -932,7 +930,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
 
             <TextView
                 android:id="@+id/tv44"
@@ -941,7 +939,58 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="@string/empty" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv51"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv52"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv53"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="@string/empty" />
+
+            <TextView
+                android:id="@+id/tv54"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="@string/empty" />
         </LinearLayout>
 
     </LinearLayout>
