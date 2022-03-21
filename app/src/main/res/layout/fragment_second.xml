@@ -683,6 +683,7 @@
     <LinearLayout
         android:layout_width="393dp"
         android:layout_height="480dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_second">
@@ -699,7 +700,10 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/tv01"
@@ -708,7 +712,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv02"
@@ -717,7 +723,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv03"
@@ -726,7 +734,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv04"
@@ -735,7 +745,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -750,7 +762,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv11"
@@ -759,7 +773,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv12"
@@ -768,7 +784,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv13"
@@ -777,7 +795,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv14"
@@ -786,7 +806,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -801,7 +823,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv21"
@@ -810,7 +834,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv22"
@@ -819,7 +845,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv23"
@@ -828,7 +856,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv24"
@@ -837,7 +867,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -852,7 +884,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv31"
@@ -861,7 +895,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv32"
@@ -870,7 +906,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv33"
@@ -879,7 +917,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv34"
@@ -888,7 +928,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -903,7 +945,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv41"
@@ -912,7 +956,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv42"
@@ -921,7 +967,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv43"
@@ -930,7 +978,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv44"
@@ -939,7 +989,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -954,7 +1006,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv51"
@@ -963,7 +1017,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv52"
@@ -972,7 +1028,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv53"
@@ -981,7 +1039,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv54"
@@ -990,7 +1050,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/textview_border"
                 android:gravity="center"
-                android:text="@string/empty" />
+                android:text="@string/empty"
+                android:textSize="48sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

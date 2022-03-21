@@ -29,6 +29,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.SortedMap;
 
 /**
  * Main Class for main function
@@ -180,19 +183,59 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String tmpWord = "";
-
         for (char c : buffer) {
             tmpWord += Character.toString(c);
         }
-
         words[posY] = tmpWord;
+
+        boolean conAl = Arrays.asList(ALLOWED).contains(tmpWord.toLowerCase(Locale.ROOT));
+        boolean conAn = Arrays.asList(ANSWERS).contains(tmpWord.toLowerCase(Locale.ROOT));
+        if (!conAl && !conAn) {
+            return;
+        }
+        System.out.println(tmpWord);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(words[i]);
+            System.out.println(words[i].equals(tmpWord));
+
+            if (words[i].equals(tmpWord)) {
+                return;
+            }
+        }
+
+        //checkMatches();
+        resetWord();
+        //Toast.makeText(getApplicationContext(),tmpWord,Toast.LENGTH_SHORT).show();
+    }
+
+    private void resetWord() {
         for (int i = 0; i < 5; i++) {
             buffer[i] = '0';
         }
         posY++;
         posX = 0;
+    }
 
-        //Toast.makeText(getApplicationContext(),tmpWord,Toast.LENGTH_SHORT).show();
+    private void checkMatches() {
+        for (int i = 0; i < 5; i++) {
+            char c = SOLUTION.charAt(i);
+            if (buffer[i] == c) {
+                tvs[posY][i].setBackgroundResource(R.drawable.right_letter);
+            }
+
+            boolean containsLetter = false;
+
+            for (int j = 0; j < 5; j++) {
+                if (buffer[j] == c) {
+                    containsLetter = true;
+                    break;
+                }
+            }
+
+            if (containsLetter) {
+                tvs[posY][i].setBackgroundResource(R.drawable.contains_letter);
+            }
+        }
     }
 
     public void removeLetter(View view) {
