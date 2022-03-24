@@ -1,16 +1,14 @@
 package com.example.wordle;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,20 +16,12 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.wordle.databinding.ActivityMainBinding;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Locale;
-import java.util.SortedMap;
 
 /**
  * Main Class for main function
@@ -84,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 resIdStr = "tv" + i + j;
                 int resID = getResources().getIdentifier(resIdStr, "id", getPackageName());
 
-                TextView tv = (TextView)findViewById(resID);
+                TextView tv = findViewById(resID);
                 tvs[i][j] = tv;
             }
         }
@@ -95,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void pickWord() {
         int rNum = (int) (Math.random() * 2314);
-        SOLUTION = ANSWERS[rNum];
+        SOLUTION = ANSWERS[rNum].toUpperCase();
+        System.out.println(SOLUTION);
     }
 
     private void loadData() {
@@ -167,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void insertChar(char c) {
-        if (posY >= 6 || posX >= 5) {
+        if (posX >= 5 && posY >= 6) {
             return;
         }
 
@@ -186,24 +177,21 @@ public class MainActivity extends AppCompatActivity {
         for (char c : buffer) {
             tmpWord += Character.toString(c);
         }
-        words[posY] = tmpWord;
 
         boolean conAl = Arrays.asList(ALLOWED).contains(tmpWord.toLowerCase(Locale.ROOT));
         boolean conAn = Arrays.asList(ANSWERS).contains(tmpWord.toLowerCase(Locale.ROOT));
         if (!conAl && !conAn) {
             return;
         }
-        System.out.println(tmpWord);
-        for (int i = 0; i < 5; i++) {
-            System.out.println(words[i]);
-            System.out.println(words[i].equals(tmpWord));
 
+        for (int i = 0; i < posY; i++) {
             if (words[i].equals(tmpWord)) {
                 return;
             }
         }
 
-        //checkMatches();
+        words[posY] = tmpWord;
+        checkMatches();
         resetWord();
         //Toast.makeText(getApplicationContext(),tmpWord,Toast.LENGTH_SHORT).show();
     }
@@ -217,25 +205,85 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkMatches() {
+        for (int j = 0; j < 5; j++) {
+            tvs[posY][j].setBackgroundResource(R.drawable.no_letter);
+        }
+        
+        // 0 solutin / 1 guess
+        boolean[][] indexes = new boolean[][]{{false,false,false,false,false},
+                                              {false,false,false,false,false}};
+
         for (int i = 0; i < 5; i++) {
-            char c = SOLUTION.charAt(i);
-            if (buffer[i] == c) {
+            char solCh = SOLUTION.charAt(i);
+            if (buffer[i] == solCh) {
+                indexes[0][i] = true;
+                indexes[1][i] = true;
                 tvs[posY][i].setBackgroundResource(R.drawable.right_letter);
             }
+        }
 
-            boolean containsLetter = false;
+        for (int i = 0; i < 5; i++) {
+            if (!indexes[0][i]) {
+                char solCh = SOLUTION.charAt(i);
 
-            for (int j = 0; j < 5; j++) {
-                if (buffer[j] == c) {
-                    containsLetter = true;
-                    break;
+                for (int j = 0; j < 5; j++) {
+                    if (solCh == buffer[j]) {
+                        tvs[posY][j].setBackgroundResource(R.drawable.contains_letter);
+                        indexes[0][i] = true;
+                        indexes[1][j] = true;
+                        break;
+                    }
                 }
             }
+        }
 
-            if (containsLetter) {
-                tvs[posY][i].setBackgroundResource(R.drawable.contains_letter);
+        checkWin(indexes);
+    }
+
+    private void checkWin(boolean[][] indexes) {
+        int counter = 0;
+        for (int i = 0; i < 5; i++) {
+            if (indexes[0][i] && indexes[1][i]) {
+                counter++;
             }
         }
+
+        if (counter == 5) {
+            endGame("You Win!!!");
+        }
+    }
+
+    private void endGame(String msg) {
+        Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            System.out.println("NO SLEEP!!!");
+        }
+        resetGame();
+    }
+
+    private void resetGame() {
+        pickWord();
+        words = new String[6];
+        for (int i = 0; i < 6; i++) {
+            words[i] = "";
+        }
+
+        buffer = new char[5];
+        for (int i = 0; i < 5; i++) {
+            buffer[i] = '0';
+        }
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 5; j++) {
+                tvs[i][j].setText(R.string.empty);
+                tvs[i][j].setBackgroundResource(R.drawable.textview_border);
+            }
+        }
+
+        posY = -1;
+        posX = 0;
     }
 
     public void removeLetter(View view) {
