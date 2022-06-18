@@ -44,6 +44,11 @@ public class Second extends Activity {
         initialize();
     }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
     private void initialize() {
         words = new String[6];
         for (int i = 0; i < 6; i++) {
@@ -230,11 +235,15 @@ public class Second extends Activity {
     private void endGame(String msg) {
         Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_LONG).show();
         try {
-            Thread.sleep(5000);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             System.out.println("NO SLEEP!!!");
         }
-        resetGame();
+        String str = "YO";
+        Intent i = new Intent(Second.this, EndGameActivity.class);
+        i.putExtra("board",str);
+        startActivity(i);
+//        resetGame();
     }
 
     private void resetGame() {
@@ -265,5 +274,9 @@ public class Second extends Activity {
             posX--;
             tvs[posY][posX].setText(" ");
         }
+    }
+
+    public static TextView[][] getTvs() {
+        return tvs;
     }
 }

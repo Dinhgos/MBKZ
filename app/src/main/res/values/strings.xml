@@ -46,5 +46,10 @@
     <string name="backspace">back</string>
     <string name="empty" />
 
+    <!-- End game -->
+    <string name="new_game">New Game</string>
+    <string name="stat">Stat</string>
+    <string name="win">You Win!</string>
+    <string name="lose">You Lose!</string>
 
 </resources>
