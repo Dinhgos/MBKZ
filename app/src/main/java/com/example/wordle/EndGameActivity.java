@@ -1,12 +1,16 @@
 package com.example.wordle;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.widget.Button;
+import android.text.format.DateFormat;
 import android.widget.TextView;
 
 public class EndGameActivity extends Activity {
+    SQLHelper eventsData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +22,53 @@ public class EndGameActivity extends Activity {
             System.out.println(value);
             //The key argument here must match that used in the other activity
         }
+
+        insertData();
+//        eventsData = new SQLHelper(this);
+//        addEvent(5);
+//        Cursor cursor = getEvents();
+//        showEvents(cursor);
         
         setBoard();
+    }
+
+    private void insertData() {
+        eventsData = new SQLHelper(this);
+        int num = Second.getPosY();
+        addEvent(num);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        eventsData.close();
+    }
+
+    private void addEvent(int numOfGuesses) {
+        SQLiteDatabase db = eventsData.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(SQLHelper.GUESSES, numOfGuesses);
+        db.insert(SQLHelper.TABLE, null, values);
+
+    }
+
+    private Cursor getEvents() {
+        SQLiteDatabase db = eventsData.getReadableDatabase();
+        Cursor cursor = db.query(SQLHelper.TABLE, null, null, null, null,
+                null, null);
+
+        //startManagingCursor(cursor);
+        return cursor;
+    }
+
+    private void showEvents(Cursor cursor) {
+        StringBuilder ret = new StringBuilder("Saved Events:\n\n");
+        while (cursor.moveToNext()) {
+            long id = cursor.getLong(0);
+            long guesses = cursor.getLong(1);
+            // ret.append(id + ": " + time + ": " + title + "\n");
+            ret.append(id + ": "+ guesses + "\n");
+        }
     }
 
     private void setBoard() {
