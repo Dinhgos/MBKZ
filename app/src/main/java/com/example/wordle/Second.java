@@ -21,8 +21,8 @@ import java.util.Arrays;
 import java.util.Locale;
 
 public class Second extends Activity {
-    private String[] words;
-    private char[] buffer;
+    private static String[] words;
+    private static char[] buffer;
     private static int posX = 0;
     private static int posY = 0;
     private static TextView[][] tvs;
@@ -36,7 +36,7 @@ public class Second extends Activity {
         setContentView(R.layout.fragment_second);
 
         Button backButton = findViewById(R.id.button_second);
-        backButton.setOnClickListener(view -> switchActivities());
+        backButton.setOnClickListener(view -> switchActivities(MainActivity.class));
 //        backButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -120,8 +120,8 @@ public class Second extends Activity {
         }
     }
 
-    private void switchActivities() {
-        Intent switchActivityIntent = new Intent(this, MainActivity.class);
+    private void switchActivities(Class cl) {
+        Intent switchActivityIntent = new Intent(this, cl);
         startActivity(switchActivityIntent);
         finish();
     }
@@ -233,7 +233,9 @@ public class Second extends Activity {
         }
 
         if (counter == 5) {
-            endGame("You Win!!!");
+//            resetGame();
+            switchActivities(EndGameActivity.class);
+//            endGame("You Win!!!");
         }
     }
 
@@ -251,7 +253,8 @@ public class Second extends Activity {
 //        resetGame();
     }
 
-    private void resetGame() {
+    // TODO reset game after win
+    public static void resetGame() {
 //        pickWord();
         words = new String[6];
         for (int i = 0; i < 6; i++) {
@@ -270,7 +273,7 @@ public class Second extends Activity {
             }
         }
 
-        posY = -1;
+        posY = 0;
         posX = 0;
     }
 

@@ -6,9 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="placeholder">(placeholder)</string>
 
     <!-- First fragment -->
     <string name="start">Start</string>
@@ -51,5 +49,15 @@
     <string name="stat">Stat</string>
     <string name="win">You Win!</string>
     <string name="lose">You Lose!</string>
+
+    <!-- Stat -->
+    <string name="games_played">Games played</string>
+    <string name="winrate">Winrate</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
 
 </resources>

@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Wordle">
         <activity android:name=".Second" />
         <activity android:name=".EndGameActivity" />
+        <activity android:name=".StatActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -2,25 +2,9 @@ package com.example.wordle;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Locale;
 
 /**
  * Main Class for main function
@@ -42,13 +26,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_menu_activity);
 
         Button switchToSecondActivity = findViewById(R.id.startBTN);
-        switchToSecondActivity.setOnClickListener(view -> switchActivities());
+        switchToSecondActivity.setOnClickListener(view -> switchActivities(Second.class));
+
+        Button openStat = findViewById(R.id.scoreBTN);
+        openStat.setOnClickListener(view -> switchActivities(StatActivity.class));
 
 //        initialize();
     }
 
-    private void switchActivities() {
-        Intent switchActivityIntent = new Intent(this, Second.class);
+    private void switchActivities(Class cl) {
+        Intent switchActivityIntent = new Intent(this, cl);
         startActivity(switchActivityIntent);
         finish();
     }

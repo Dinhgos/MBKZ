@@ -2,10 +2,12 @@ package com.example.wordle;
 
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class EndGameActivity extends Activity {
@@ -23,6 +25,12 @@ public class EndGameActivity extends Activity {
             //The key argument here must match that used in the other activity
         }
 
+        Button switchToSecondActivity = findViewById(R.id.stat_btn);
+        switchToSecondActivity.setOnClickListener(view -> switchActivities(StatActivity.class));
+
+        Button openStat = findViewById(R.id.new_game_btn);
+        openStat.setOnClickListener(view -> switchActivities(Second.class));
+
         insertData();
 //        eventsData = new SQLHelper(this);
 //        addEvent(5);
@@ -30,6 +38,12 @@ public class EndGameActivity extends Activity {
 //        showEvents(cursor);
         
         setBoard();
+    }
+
+    private void switchActivities(Class cl) {
+        Intent switchActivityIntent = new Intent(this, cl);
+        startActivity(switchActivityIntent);
+        finish();
     }
 
     private void insertData() {
@@ -109,5 +123,7 @@ public class EndGameActivity extends Activity {
                 }
             }
         }
+
+        Second.resetGame();
     }
 }
