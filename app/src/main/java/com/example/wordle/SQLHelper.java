@@ -45,5 +45,4 @@ public class SQLHelper extends SQLiteOpenHelper {
         if (sql != null)
             db.execSQL(sql);
     }
-
 }

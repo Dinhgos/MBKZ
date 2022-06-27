@@ -7,10 +7,14 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * Main Class for main function
+ * Class for main menu activity
  */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * create activity
+     * @param savedInstanceState savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
         quit.setOnClickListener(view -> closeAPP());
     }
 
+    /**
+     * quit button handler
+     * closes the app
+     */
     private void closeAPP() {
         finish();
         System.exit(0);
     }
 
+    /**
+     * switches to another activity
+     * @param cl next activity
+     */
     private void switchActivities(Class cl) {
         Intent switchActivityIntent = new Intent(this, cl);
         startActivity(switchActivityIntent);

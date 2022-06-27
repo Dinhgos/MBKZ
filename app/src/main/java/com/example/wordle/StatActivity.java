@@ -9,9 +9,17 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+/**
+ * Class for players statistics.
+ */
 public class StatActivity extends Activity {
+    /** database */
     SQLHelper eventsData;
 
+    /**
+     * create activity
+     * @param savedInstanceState savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,18 +33,29 @@ public class StatActivity extends Activity {
         openStat.setOnClickListener(view -> switchActivities(MainActivity.class));
     }
 
+    /**
+     * closing activity
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
         eventsData.close();
     }
 
+    /**
+     * switches to another activity
+     * @param cl next activity
+     */
     private void switchActivities(Class cl) {
         Intent switchActivityIntent = new Intent(this, cl);
         startActivity(switchActivityIntent);
         finish();
     }
 
+    /**
+     * gets data from database
+     * @return database cursor
+     */
     private Cursor getEvents() {
         SQLiteDatabase db = eventsData.getReadableDatabase();
         Cursor cursor = db.query(SQLHelper.TABLE, null, null, null, null,
@@ -45,16 +64,18 @@ public class StatActivity extends Activity {
         return cursor;
     }
 
+    /**
+     * processes data from database and displays them
+     * @param cursor database cursor
+     */
     private void showEvents(Cursor cursor) {
         double[] data = new double[7];
         double games = 0;
 
         while (cursor.moveToNext()) {
-//            int id = cursor.getInt(0);
             int guesses = cursor.getInt(1);
             data[guesses - 1]++;
             games++;
-//            ret.append(id + ": " + guesses + "\n");
         }
 
         TextView tv = findViewById(R.id.numGamesTV);

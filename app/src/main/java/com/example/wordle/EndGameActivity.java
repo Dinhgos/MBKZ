@@ -8,20 +8,21 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * class for showing end game result
+ */
 public class EndGameActivity extends Activity {
+    /** database */
     SQLHelper eventsData;
 
+    /**
+     * create activity
+     * @param savedInstanceState savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.end_game);
-
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String value = extras.getString("board");
-            System.out.println(value);
-            //The key argument here must match that used in the other activity
-        }
 
         Button switchToSecondActivity = findViewById(R.id.stat_btn);
         switchToSecondActivity.setOnClickListener(view -> switchActivities(StatActivity.class));
@@ -33,24 +34,38 @@ public class EndGameActivity extends Activity {
         setBoard();
     }
 
+    /**
+     * switches to another activity
+     * @param cl next activity
+     */
     private void switchActivities(Class cl) {
         Intent switchActivityIntent = new Intent(this, cl);
         startActivity(switchActivityIntent);
         finish();
     }
 
+    /**
+     * sets up database for inserting data
+     */
     private void insertData() {
         eventsData = new SQLHelper(this);
         int num = Second.getPosY();
         addEvent(num);
     }
 
+    /**
+     * closing activity
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();
         eventsData.close();
     }
 
+    /**
+     * inserts game result into database
+     * @param numOfGuesses number of guesses
+     */
     private void addEvent(int numOfGuesses) {
         boolean win = Second.isWin();
         if (!win) {
@@ -65,6 +80,10 @@ public class EndGameActivity extends Activity {
         showResult(numOfGuesses);
     }
 
+    /**
+     * shows winning/losing message
+     * @param numOfGuesses number of guesses
+     */
     private void showResult(int numOfGuesses) {
         TextView result = findViewById(R.id.end_game_tv);
         if (numOfGuesses < 7) {
@@ -74,6 +93,9 @@ public class EndGameActivity extends Activity {
         }
     }
 
+    /**
+     * shows game board
+     */
     private void setBoard() {
         TextView[][] tvs = Second.getTvs();
         TextView[][] board = new TextView[6][5];
