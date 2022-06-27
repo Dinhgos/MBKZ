@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/button_icon.xml" value="0.2495" />
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/button_icon_contains.xml" value="0.2495" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/contains_letter.xml" value="0.2265" />
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/isset.xml" value="0.12" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/no_letter.xml" value="0.2265" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/right_letter.xml" value="0.2265" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/drawable/textview_border.xml" value="0.2265" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/end_game.xml" value="0.264" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/fragment_first.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/fragment_second.xml" value="0.264" />
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/fragment_second.xml" value="0.2" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/grid.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/main_menu_activity.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/stat.xml" value="0.2" />
         <entry key="..\:/Users/dinhg/Documents/School/06/MBKZ/SP/app/src/main/res/layout/table_layout.xml" value="0.22826086956521738" />
       </map>
     </option>
