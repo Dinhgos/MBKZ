@@ -1,9 +1,11 @@
 package com.example.wordle;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -18,12 +20,21 @@ public class StatActivity extends Activity {
         eventsData = new SQLHelper(this);
         Cursor cursor = getEvents();
         showEvents(cursor);
+
+        Button openStat = findViewById(R.id.stat_back_btn);
+        openStat.setOnClickListener(view -> switchActivities(MainActivity.class));
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         eventsData.close();
+    }
+
+    private void switchActivities(Class cl) {
+        Intent switchActivityIntent = new Intent(this, cl);
+        startActivity(switchActivityIntent);
+        finish();
     }
 
     private Cursor getEvents() {
@@ -39,7 +50,6 @@ public class StatActivity extends Activity {
         double games = 0;
 
         while (cursor.moveToNext()) {
-            // TODO guess index out of bounds
 //            int id = cursor.getInt(0);
             int guesses = cursor.getInt(1);
             data[guesses - 1]++;
@@ -48,12 +58,12 @@ public class StatActivity extends Activity {
         }
 
         TextView tv = findViewById(R.id.numGamesTV);
-        tv.setText(String.valueOf(games));
+        tv.setText(String.valueOf((int)games));
 
         double loseRate = data[6] / games;
         double winrate = (1 - (loseRate)) * 100;
         tv = findViewById(R.id.numWinRateTV);
-        tv.setText(String.valueOf(winrate));
+        tv.setText((int) winrate + " %");
 
         for (int i = 0; i < 7; i++) {
             int id = (i+1);

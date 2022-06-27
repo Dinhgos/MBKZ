@@ -3,10 +3,8 @@ package com.example.wordle;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,11 +30,6 @@ public class EndGameActivity extends Activity {
         openStat.setOnClickListener(view -> switchActivities(Second.class));
 
         insertData();
-//        eventsData = new SQLHelper(this);
-//        addEvent(5);
-//        Cursor cursor = getEvents();
-//        showEvents(cursor);
-        
         setBoard();
     }
 
@@ -59,29 +52,25 @@ public class EndGameActivity extends Activity {
     }
 
     private void addEvent(int numOfGuesses) {
+        boolean win = Second.isWin();
+        if (!win) {
+            numOfGuesses++;
+        }
+
         SQLiteDatabase db = eventsData.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(SQLHelper.GUESSES, numOfGuesses);
         db.insert(SQLHelper.TABLE, null, values);
 
+        showResult(numOfGuesses);
     }
 
-    private Cursor getEvents() {
-        SQLiteDatabase db = eventsData.getReadableDatabase();
-        Cursor cursor = db.query(SQLHelper.TABLE, null, null, null, null,
-                null, null);
-
-        //startManagingCursor(cursor);
-        return cursor;
-    }
-
-    private void showEvents(Cursor cursor) {
-        StringBuilder ret = new StringBuilder("Saved Events:\n\n");
-        while (cursor.moveToNext()) {
-            long id = cursor.getLong(0);
-            long guesses = cursor.getLong(1);
-            // ret.append(id + ": " + time + ": " + title + "\n");
-            ret.append(id + ": "+ guesses + "\n");
+    private void showResult(int numOfGuesses) {
+        TextView result = findViewById(R.id.end_game_tv);
+        if (numOfGuesses < 7) {
+            result.setText(R.string.win);
+        } else {
+            result.setText(R.string.lose);
         }
     }
 
